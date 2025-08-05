@@ -5,8 +5,6 @@ import { IdeMessengerContext } from "../../../context/IdeMessenger";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { selectCurrentOrg } from "../../../redux/slices/profilesSlice";
 import { selectFirstHubProfile } from "../../../redux/thunks/selectFirstHubProfile";
-import { hasPassedFTL } from "../../../util/freeTrial";
-import { ToolTip } from "../../gui/Tooltip";
 import ContinueLogo from "../../svg/ContinueLogo";
 import { useOnboardingCard } from "../hooks/useOnboardingCard";
 
@@ -33,7 +31,7 @@ export function OnboardingCardLanding({
         void dispatch(selectFirstHubProfile());
 
         ideMessenger.post("showTutorial", undefined);
-        ideMessenger.post("showToast", ["info", "🎉 Welcome to Continue!"]);
+        ideMessenger.post("showToast", ["info", "🎉 Welcome to Continue for IDEMIA!"]);
       }
     });
   }
@@ -46,7 +44,7 @@ export function OnboardingCardLanding({
     onboardingCard.close(isDialog);
   }
 
-  const pastFreeTrialLimit = hasPassedFTL();
+  const pastFreeTrialLimit = false;
 
   return (
     <div className="xs:px-0 flex w-full max-w-full flex-col items-center justify-center px-4 text-center">
@@ -62,6 +60,7 @@ export function OnboardingCardLanding({
           </p>
           <Button
             onClick={openPastFreeTrialOnboarding}
+            disabled="True"
             className="mt-4 grid w-full grid-flow-col items-center gap-2"
           >
             Go to Continue Platform
@@ -70,9 +69,10 @@ export function OnboardingCardLanding({
       ) : (
         <>
           <p className="mb-5 mt-0 w-full text-sm">
-            Log in to access a free trial of the
+            This is a custom fork of Continue for IDEMIA employees.
+            All Continue API are not accessible
             <br />
-            <span
+            {/* <span
               className="cursor-pointer underline hover:brightness-125"
               data-tooltip-id="models-addon-tooltip"
               onClick={() =>
@@ -86,20 +86,21 @@ export function OnboardingCardLanding({
             <ToolTip id="models-addon-tooltip" place="bottom">
               Free trial includes 50 Chat requests and 2,000 autocomplete
               requests
-            </ToolTip>
+            </ToolTip> */}
           </p>
 
           <Button
             onClick={onGetStarted}
+            disabled="True"
             className="mt-4 grid w-full grid-flow-col items-center gap-2"
           >
-            Log in to Continue Hub
+            Log in to Continue Hub (Disabled)
           </Button>
         </>
       )}
 
       <SecondaryButton onClick={onSelectConfigure} className="w-full">
-        Or, configure your own models
+        Configure for IDEMIA
       </SecondaryButton>
     </div>
   );
