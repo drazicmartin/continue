@@ -227,7 +227,8 @@ function InputToolbar(props: InputToolbarProps) {
               }
             }}
             disabled={isEnterDisabled}
-          >
+            style={{ backgroundColor: "#430099"}} // Tailwind purple-500
+            >
             <span className="hidden md:inline">
               ⏎ {props.toolbarOptions?.enterText ?? "Enter"}
             </span>
