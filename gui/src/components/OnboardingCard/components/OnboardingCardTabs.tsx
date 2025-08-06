@@ -58,6 +58,18 @@ const renderTabButton = (
       </button>
     );
   }
+  if (tabTitle === OnboardingModes.IDEMIA) {
+    return (
+      <button
+        className={baseButtonClass}
+        key={tabTitle}
+        onClick={() => onTabClick(tabTitle as OnboardingModes)}
+        data-testid={`onboarding-tab-${tabTitle}`}
+      >
+        {tabTitle}
+      </button>
+    );
+  }
 
   return null;
 };
@@ -80,14 +92,16 @@ export function OnboardingCardTabs({
    */
   const tabs = showFreeTrialExceededAlert
     ? [
-        OnboardingModes.MODELS_ADD_ON,
-        OnboardingModes.API_KEY,
+        OnboardingModes.IDEMIA,
         OnboardingModes.LOCAL,
+        // OnboardingModes.MODELS_ADD_ON,
+        // OnboardingModes.API_KEY,
       ]
     : [
-        OnboardingModes.API_KEY,
+        OnboardingModes.IDEMIA,
         OnboardingModes.LOCAL,
-        OnboardingModes.MODELS_ADD_ON,
+        // OnboardingModes.API_KEY,
+        // OnboardingModes.MODELS_ADD_ON,
       ];
   return (
     <div>

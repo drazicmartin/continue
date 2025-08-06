@@ -5,6 +5,7 @@ import Alert from "../gui/Alert";
 import { ReusableCard } from "../ReusableCard";
 import { OnboardingCardLanding } from "./components/OnboardingCardLanding";
 import { OnboardingCardTabs } from "./components/OnboardingCardTabs";
+import { OnboardingIdemiaTab } from "./components/OnboardingIdemiaTab";
 import { OnboardingLocalTab } from "./components/OnboardingLocalTab";
 import { OnboardingModelsAddOnTab } from "./components/OnboardingModelsAddOnTab";
 import { OnboardingProvidersTab } from "./components/OnboardingProvidersTab";
@@ -33,6 +34,8 @@ export function OnboardingCard({
 
   function renderTabContent() {
     switch (activeTab) {
+      case OnboardingModes.IDEMIA:
+        return <OnboardingIdemiaTab />;
       case OnboardingModes.API_KEY:
         return <OnboardingProvidersTab />;
       case OnboardingModes.LOCAL:
@@ -81,7 +84,7 @@ export function OnboardingCard({
     >
       <div className="flex h-full w-full items-center justify-center">
         <OnboardingCardLanding
-          onSelectConfigure={() => setActiveTab(OnboardingModes.API_KEY)}
+          onSelectConfigure={() => setActiveTab(OnboardingModes.IDEMIA)}
           isDialog={isDialog}
         />
       </div>

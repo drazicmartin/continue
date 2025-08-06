@@ -116,7 +116,7 @@ export function OnboardingModelsAddOnTab() {
       </div>
 
       <div className="w-full">
-        <Button onClick={handleUpgrade} className="w-full max-w-xs">
+        <Button disabled="True" onClick={handleUpgrade} className="w-full max-w-xs">
           Upgrade
         </Button>
       </div>
@@ -124,7 +124,7 @@ export function OnboardingModelsAddOnTab() {
         <span className="text-description">
           <span
             className="cursor-pointer underline hover:brightness-125"
-            onClick={openPricingPage}
+            // onClick={openPricingPage}
           >
             Click here
           </span>{" "}

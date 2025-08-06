@@ -53,6 +53,7 @@ export enum OnboardingModes {
   API_KEY = "API Key",
   LOCAL = "Local",
   MODELS_ADD_ON = "Models Add-On",
+  IDEMIA = "IDEMIA",
 }
 
 export interface ListHistoryOptions {
