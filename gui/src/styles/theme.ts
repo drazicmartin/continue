@@ -29,7 +29,7 @@ export const THEME_COLORS = {
   },
   "primary-background": {
     vars: ["--vscode-button-background"],
-    default: "#2c5aa0", // medium blue
+    default: "#430099", // medium purple
   },
   "primary-foreground": {
     vars: ["--vscode-button-foreground"],
@@ -37,7 +37,7 @@ export const THEME_COLORS = {
   },
   "primary-hover": {
     vars: ["--vscode-button-hoverBackground"],
-    default: "#3a6db3", // lighter blue
+    default: "#917db9", // lighter purple
   },
   "secondary-background": {
     vars: ["--vscode-button-secondaryBackground"],
