@@ -44,14 +44,14 @@ export const defaultConfig: ConfigYaml = {
         - Security vulnerabilities
         - Performance issues
         - Anything else that looks wrong
-        Once you find an error, please explain it as clearly as possible, but without using extra words. For example, instead of saying 'I think there is a syntax error on line 5', you should say 'Syntax error on line 5'. Give your answer as one bullet point per mistake found.`, 
-    }
+        Once you find an error, please explain it as clearly as possible, but without using extra words. For example, instead of saying 'I think there is a syntax error on line 5', you should say 'Syntax error on line 5'. Give your answer as one bullet point per mistake found.`,
+    },
   ],
   context: defaultContextProvidersVsCode,
 };
 
 export const defaultConfigJetBrains: ConfigYaml = {
-  name: "Local Assistant",
+  name: "Idemia DeepLLM Assistant",
   version: "1.0.0",
   schema: "v2",
   models: [
