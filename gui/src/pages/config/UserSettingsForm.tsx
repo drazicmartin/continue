@@ -95,7 +95,7 @@ export function UserSettingsForm() {
   const enableStaticContextualization =
     config.experimental?.enableStaticContextualization ?? false;
 
-  const allowAnonymousTelemetry = config.allowAnonymousTelemetry ?? true;
+  const allowAnonymousTelemetry = config.allowAnonymousTelemetry ?? false;
   const disableIndexing = config.disableIndexing ?? false;
 
   // const useAutocompleteCache = config.tabAutocompleteOptions?.useCache ?? true;
